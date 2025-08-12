@@ -12,6 +12,8 @@ langchain-experimental = "*"
 qrcode = "*"
 black = "*"
 pillow = "*"
+pandas = "*"
+tabulate = "*"
 
 [dev-packages]
 
