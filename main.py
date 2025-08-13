@@ -26,7 +26,7 @@ def main():
     tools = [PythonREPLTool()]
 
     python_agent = create_react_agent(
-        llm=ChatOllama(model="qwen3:4b", temperature=0),
+        llm=ChatOllama(model="qwen3:1.7b", temperature=0),
         tools=tools,
         prompt=prompt
     )
@@ -35,7 +35,7 @@ def main():
 
     # python_agent_executor.invoke(input={"input": "generate and save in current working directory 15 QR codes that point to www.udemy.com/course/langchain, you have qrcode package installed already"})
 
-    csv_agent_executor = create_csv_agent(llm=ChatOllama(model="qwen3:4b", temperature=0), path="episode_info.csv", allow_dangerous_code=True, verbose=True)
+    csv_agent_executor = create_csv_agent(llm=ChatOllama(model="qwen3:1.7b", temperature=0), path="episode_info.csv", allow_dangerous_code=True, verbose=True)
 
     # csv_agent_executor.invoke(input={"input": "how many columns are there in the episode_info.csv file?"})
 
